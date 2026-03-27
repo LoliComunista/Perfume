@@ -27,11 +27,13 @@ public class GerenciadorPerfumes {
     public void setCopOriginal(ArrayList<String> copOriginal) {
         this.copOriginal = copOriginal;
     }
+//Cadastro
 
     public void cadastro(String nome) {
         perfume.add(nome);
         System.out.println("Perfume cadastrado com sucesso");
     }
+//Alterar
 
     public void alterar(String nomeAntigo, String nomeNovo) {
         int index = perfume.indexOf(nomeAntigo);
@@ -41,5 +43,12 @@ public class GerenciadorPerfumes {
         } else {
             System.out.println("Perfume não encontrado");
         }
+        //Excluir
+    public void excluir(String nome) {
+        if (perfume.remove(nome)) {
+            System.out.println("Perfume Removido");
+        }
     }
+
 }
+
