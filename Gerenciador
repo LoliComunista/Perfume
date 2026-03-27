@@ -1,0 +1,15 @@
+# Perfumepackage br.ulbra.listaperfume;
+
+import java.util.ArrayList;
+
+public class GerenciadorPerfumes {
+
+    private ArrayList<String> perfume;
+    private ArrayList<String> copOriginal;
+
+    public void cadastro(String nome) {
+        perfume.add(nome);
+        System.out.println("Perfume cadastrado com sucesso");
+    }
+    public void alterar(Sring )
+}
