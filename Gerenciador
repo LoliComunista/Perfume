@@ -1,4 +1,4 @@
-# Perfumepackage br.ulbra.listaperfume;
+package br.ulbra.listaperfume;
 
 import java.util.ArrayList;
 
@@ -7,9 +7,39 @@ public class GerenciadorPerfumes {
     private ArrayList<String> perfume;
     private ArrayList<String> copOriginal;
 
+    public GerenciadorPerfumes(ArrayList<String> perfume, ArrayList<String> copOriginal) {
+        this.perfume = perfume;
+        this.copOriginal = copOriginal;
+    }
+
+    public ArrayList<String> getPerfume() {
+        return perfume;
+    }
+
+    public void setPerfume(ArrayList<String> perfume) {
+        this.perfume = perfume;
+    }
+
+    public ArrayList<String> getCopOriginal() {
+        return copOriginal;
+    }
+
+    public void setCopOriginal(ArrayList<String> copOriginal) {
+        this.copOriginal = copOriginal;
+    }
+
     public void cadastro(String nome) {
         perfume.add(nome);
         System.out.println("Perfume cadastrado com sucesso");
     }
-    public void alterar(Sring )
+
+    public void alterar(String nomeAntigo, String nomeNovo) {
+        int index = perfume.indexOf(nomeAntigo);
+        if (index != -1) {
+            perfume.set(index, nomeNovo);
+            System.out.println("Nome alterado com sucesso");
+        } else {
+            System.out.println("Perfume não encontrado");
+        }
+    }
 }
